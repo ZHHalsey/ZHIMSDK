@@ -1,0 +1,6 @@
+framework module DPSIMSDK {
+  umbrella header "DPSIMSDK.h"
+
+  export *
+  module * { export * }
+}
