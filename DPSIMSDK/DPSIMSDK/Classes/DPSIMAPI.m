@@ -12,7 +12,7 @@
 
 // 接口test
 + (void)testLog{
-    NSLog(@"logTest----实时打印");
+    NSLog(@"logTest----实时打印222");
 }
 
 
