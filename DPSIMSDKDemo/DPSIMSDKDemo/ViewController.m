@@ -21,6 +21,7 @@
     self.title = @"vc";
     self.view.backgroundColor = [UIColor grayColor];
     [DPSIMAPI testLog];
+    
 }
 
 
