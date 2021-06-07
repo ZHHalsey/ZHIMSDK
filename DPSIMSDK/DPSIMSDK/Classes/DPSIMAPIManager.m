@@ -15,11 +15,11 @@
         NSLog(@"code--%d, result--%@", code, resultDic);
     }];
 }
+
 - (void)sendMessage:(NSString *)message withBlock:(void(^)(int code, NSDictionary *resultDic))sendMsgBlock{
     [[DPSIMSocketManager sharedInstance] sendMessage:message withBlock:sendMsgBlock];
 }
 
-/// 接收到的消息
 - (void)didReceivedMessage:(void(^)(int code, NSDictionary *resultDic))receivedMsgBlock{
     [[DPSIMSocketManager sharedInstance] didReceivedMessage:receivedMsgBlock];
 }

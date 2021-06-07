@@ -16,9 +16,37 @@
 		E2A254C32665D59A008CF85D /* DPSIMSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A254C12665D59A008CF85D /* DPSIMSocketManager.m */; };
 		E2A254DB2665E561008CF85D /* DPSIMAPIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A254D92665E561008CF85D /* DPSIMAPIManager.h */; };
 		E2A254DC2665E561008CF85D /* DPSIMAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A254DA2665E561008CF85D /* DPSIMAPIManager.m */; };
+		E2BCC37F266E1624000A908F /* Person.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = E2BCC37E266E1624000A908F /* Person.pbobjc.h */; };
+		E2BCC382266E162B000A908F /* Person.proto in Sources */ = {isa = PBXBuildFile; fileRef = E2BCC381266E162B000A908F /* Person.proto */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E2BCC396266E166F000A908F /* libProtocolBuffers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BCC38C266E165B000A908F /* libProtocolBuffers.a */; };
+		E2BCC39B266E18F8000A908F /* Person.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BCC39A266E18F8000A908F /* Person.pbobjc.m */; };
 		E2F6E46B266A20A30013FED3 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = E2F6E469266A20A30013FED3 /* GCDAsyncSocket.h */; };
 		E2F6E46C266A20A30013FED3 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F6E46A266A20A30013FED3 /* GCDAsyncSocket.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2BCC38B266E165B000A908F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2BCC384266E165B000A908F /* ProtocolBuffers_iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7461B52E0F94FAF800A0C422;
+			remoteInfo = ProtocolBuffers;
+		};
+		E2BCC38D266E165B000A908F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2BCC384266E165B000A908F /* ProtocolBuffers_iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8BBEA4A6147C727100C4ADB7;
+			remoteInfo = UnitTests;
+		};
+		E2BCC38F266E165B000A908F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2BCC384266E165B000A908F /* ProtocolBuffers_iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F4487C6E1A9F8F8100531423;
+			remoteInfo = TestSingleSourceBuild;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E247F20C2664D38C004CB12F /* DPSIMSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DPSIMSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +60,10 @@
 		E2A254C12665D59A008CF85D /* DPSIMSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMSocketManager.m; sourceTree = "<group>"; };
 		E2A254D92665E561008CF85D /* DPSIMAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMAPIManager.h; sourceTree = "<group>"; };
 		E2A254DA2665E561008CF85D /* DPSIMAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMAPIManager.m; sourceTree = "<group>"; };
+		E2BCC37E266E1624000A908F /* Person.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.pbobjc.h; sourceTree = "<group>"; };
+		E2BCC381266E162B000A908F /* Person.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = Person.proto; sourceTree = "<group>"; };
+		E2BCC384266E165B000A908F /* ProtocolBuffers_iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolBuffers_iOS.xcodeproj; path = "../../../../Desktop/protobuf-3.17.1/objectivec/ProtocolBuffers_iOS.xcodeproj"; sourceTree = "<group>"; };
+		E2BCC39A266E18F8000A908F /* Person.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.pbobjc.m; sourceTree = "<group>"; };
 		E2F6E469266A20A30013FED3 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		E2F6E46A266A20A30013FED3 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2BCC396266E166F000A908F /* libProtocolBuffers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +85,7 @@
 			children = (
 				E247F20E2664D38C004CB12F /* DPSIMSDK */,
 				E247F20D2664D38C004CB12F /* Products */,
+				E2BCC395266E166F000A908F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +100,7 @@
 		E247F20E2664D38C004CB12F /* DPSIMSDK */ = {
 			isa = PBXGroup;
 			children = (
+				E2BCC37B266E15BC000A908F /* ProtobufLib */,
 				E247F20F2664D38C004CB12F /* DPSIMSDK.h */,
 				E247F2102664D38C004CB12F /* Info.plist */,
 				E247F2692664D896004CB12F /* Classes */,
@@ -85,6 +120,8 @@
 				E2A254C12665D59A008CF85D /* DPSIMSocketManager.m */,
 				E2A254BA2665D4FF008CF85D /* DPSIMSingleton.h */,
 				E2A254BB2665D4FF008CF85D /* DPSIMSingleton.m */,
+				E2BCC37D266E15FF000A908F /* protobufOut */,
+				E2BCC37C266E15FF000A908F /* protobufSource */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -98,6 +135,48 @@
 			path = Socket;
 			sourceTree = "<group>";
 		};
+		E2BCC37B266E15BC000A908F /* ProtobufLib */ = {
+			isa = PBXGroup;
+			children = (
+				E2BCC384266E165B000A908F /* ProtocolBuffers_iOS.xcodeproj */,
+			);
+			path = ProtobufLib;
+			sourceTree = "<group>";
+		};
+		E2BCC37C266E15FF000A908F /* protobufSource */ = {
+			isa = PBXGroup;
+			children = (
+				E2BCC381266E162B000A908F /* Person.proto */,
+			);
+			path = protobufSource;
+			sourceTree = "<group>";
+		};
+		E2BCC37D266E15FF000A908F /* protobufOut */ = {
+			isa = PBXGroup;
+			children = (
+				E2BCC37E266E1624000A908F /* Person.pbobjc.h */,
+				E2BCC39A266E18F8000A908F /* Person.pbobjc.m */,
+			);
+			path = protobufOut;
+			sourceTree = "<group>";
+		};
+		E2BCC385266E165B000A908F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2BCC38C266E165B000A908F /* libProtocolBuffers.a */,
+				E2BCC38E266E165B000A908F /* UnitTests.xctest */,
+				E2BCC390266E165B000A908F /* libTestSingleSourceBuild.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2BCC395266E166F000A908F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -109,6 +188,7 @@
 				E2A254DB2665E561008CF85D /* DPSIMAPIManager.h in Headers */,
 				E247F2112664D38C004CB12F /* DPSIMSDK.h in Headers */,
 				E2A254C22665D59A008CF85D /* DPSIMSocketManager.h in Headers */,
+				E2BCC37F266E1624000A908F /* Person.pbobjc.h in Headers */,
 				E2A254BC2665D4FF008CF85D /* DPSIMSingleton.h in Headers */,
 				E2F6E46B266A20A30013FED3 /* GCDAsyncSocket.h in Headers */,
 			);
@@ -159,12 +239,42 @@
 			mainGroup = E247F2022664D38C004CB12F;
 			productRefGroup = E247F20D2664D38C004CB12F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E2BCC385266E165B000A908F /* Products */;
+					ProjectRef = E2BCC384266E165B000A908F /* ProtocolBuffers_iOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E247F20B2664D38C004CB12F /* DPSIMSDK */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E2BCC38C266E165B000A908F /* libProtocolBuffers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libProtocolBuffers.a;
+			remoteRef = E2BCC38B266E165B000A908F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E2BCC38E266E165B000A908F /* UnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.xctest;
+			remoteRef = E2BCC38D266E165B000A908F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E2BCC390266E165B000A908F /* libTestSingleSourceBuild.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTestSingleSourceBuild.a;
+			remoteRef = E2BCC38F266E165B000A908F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E247F20A2664D38C004CB12F /* Resources */ = {
@@ -181,11 +291,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2BCC39B266E18F8000A908F /* Person.pbobjc.m in Sources */,
 				E2A254C32665D59A008CF85D /* DPSIMSocketManager.m in Sources */,
 				E2F6E46C266A20A30013FED3 /* GCDAsyncSocket.m in Sources */,
 				E2A254DC2665E561008CF85D /* DPSIMAPIManager.m in Sources */,
 				E247F26E2664D8DD004CB12F /* DPSIMAPI.m in Sources */,
 				E2A254BD2665D4FF008CF85D /* DPSIMSingleton.m in Sources */,
+				E2BCC382266E162B000A908F /* Person.proto in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +430,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "$(PROJECT)/Protobuf";
 				INFOPLIST_FILE = DPSIMSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -340,6 +453,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "$(PROJECT)/Protobuf";
 				INFOPLIST_FILE = DPSIMSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

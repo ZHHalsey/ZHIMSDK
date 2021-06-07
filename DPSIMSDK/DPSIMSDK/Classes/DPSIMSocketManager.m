@@ -6,6 +6,7 @@
 //
 
 #import "DPSIMSocketManager.h"
+#import "Person.pbobjc.h"
 
 
 #define socketHost @"192.168.0.43"
@@ -41,12 +42,33 @@
 
 /// 发送消息
 - (void)sendMessage:(NSString *)message withBlock:(void(^)(int code, NSDictionary *resultDic))sendMsgBlock{
+    
+    // 下面这是传递字符串的
     NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
     [self.clientSocket writeData:data withTimeout:-1 tag:0];
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [dic setObject:@"send message success" forKey:@"msg"];
     [dic setObject:message forKey:@"MsgContent"];
     sendMsgBlock(1, dic);
+    
+    
+    
+    
+    
+    
+    // 下面这是通过protobuf协议传递数据的 (通过probuf协议传输的时候就打开下面的注释 by zh 2020.5.7)
+//    Person *person = [[Person alloc]init];
+//    person.age = 13;
+//    person.username = @"zh";
+//    person.phone = @"123456";
+//    NSData *data1 = [person data];
+//    [self.clientSocket writeData:data1 withTimeout:-1 tag:0];
+//    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+//    [dic setObject:@"send message success" forKey:@"msg"];
+//    Person *p = [Person parseFromData:data1 error:nil]; // data1模拟为服务端传递过来的, 模拟解码
+//    [dic setObject:p forKey:@"MsgContent"];
+//    sendMsgBlock(1, dic);
+
 }
 
 /// 接收到的消息

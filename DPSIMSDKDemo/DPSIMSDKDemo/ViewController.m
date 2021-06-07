@@ -27,7 +27,7 @@
     NSArray *btnArray = @[
         @"初始化SDK",
         @"连接socket",
-        @"开始接收消息",
+        @"开始接收消息",// 点击后才能收到消息
         @"发送消息",
     ]; // 新功能直接往后加标题, demo中会自动从左往右创建相应的按钮
     for (int i = 0; i< [btnArray count]; i++) {
@@ -45,7 +45,7 @@
         NSLog(@"点击了连接socket");
         [DPSIMAPI initSDK];
     }else if (btn.tag == 2){
-        NSLog(@"点击了开始接收消息");// 进行点击后才能收到消息
+        NSLog(@"点击了开始接收消息");
         [DPSIMAPI didReceivedMessage:^(int code, NSDictionary * _Nonnull resultDic) {
             NSLog(@"demo中接收到的数据:%d, 数据:%@", code, resultDic);
         }];

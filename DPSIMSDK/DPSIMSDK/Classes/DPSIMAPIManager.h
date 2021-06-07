@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 发送消息
 - (void)sendMessage:(NSString *)message withBlock:(void(^)(int code, NSDictionary *resultDic))sendMsgBlock;
 
-
 /// 接收到的消息
 - (void)didReceivedMessage:(void(^)(int code, NSDictionary *resultDic))receivedMsgBlock;
 

@@ -15,13 +15,22 @@ NS_ASSUME_NONNULL_BEGIN
 /// 接口test
 + (void)testLog;
 
-/// 初始化sdk
+/**
+ *  @brief                      初始化sdk
+ */
 + (void)initSDK;
 
-/// 发送消息
+/**
+ *  @brief                      发送消息
+ *  @param message              发送的消息文本
+ *  @param sendMsgBlock         回调block
+ */
 + (void)sendMessage:(NSString *)message withBlock:(void(^)(int code, NSDictionary *resultDic))sendMsgBlock;
 
-/// 接收到的消息
+/**
+ *  @brief                      接收消息
+ *  @param receivedMsgBlock     回调block
+ */
 + (void)didReceivedMessage:(void(^)(int code, NSDictionary *resultDic))receivedMsgBlock;
 
 @end
