@@ -25,6 +25,9 @@ typedef void (^receivedMsgBlock)(int code, NSDictionary *resultDic);
 /// 断开socket连接
 - (void)socketDisConnect;
 
+/// 发送心跳
+- (void)sendHeartBeat;
+
 /// 发送消息
 - (void)sendMessage:(NSString *)message withBlock:(void(^)(int code, NSDictionary *resultDic))sendMsgBlock;
 

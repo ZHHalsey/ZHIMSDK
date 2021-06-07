@@ -11,12 +11,14 @@
 
 #define socketHost @"192.168.0.43"
 #define socketPort 8211
+#define HeartBeatID  @"beatID"    //心跳标识
 
 
 
 @interface DPSIMSocketManager () <GCDAsyncSocketDelegate>
 
 @property (nonatomic, strong)GCDAsyncSocket *clientSocket;
+@property (nonatomic, strong)dispatch_source_t beatTimer;
 
 @end
 
@@ -36,8 +38,30 @@
 
 /// 断开socket连接
 - (void)socketDisConnect{
+    NSLog(@"sdk--socketDisConnect");
     [self.clientSocket disconnect];
+    dispatch_source_cancel(self.beatTimer); // 关闭心跳定时器
     self.clientSocket = nil;
+}
+
+/// 发送心跳
+- (void)sendHeartBeat{
+    if (!self.beatTimer) {
+            dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+            self.beatTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+            dispatch_time_t start = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC));
+            uint64_t interval = (uint64_t)(3 * NSEC_PER_SEC); // 每隔3秒调用一次
+            dispatch_source_set_timer(self.beatTimer, start, interval, 0);
+            dispatch_source_set_event_handler(self.beatTimer, ^{
+                // 心跳包data
+//                NSData *beatData = [[NSData alloc]initWithBase64EncodedString:@"" options:NSDataBase64DecodingIgnoreUnknownCharacters];
+                NSData *beatData = [@"心跳包内容" dataUsingEncoding:NSUTF8StringEncoding];
+                [self.clientSocket writeData:beatData withTimeout:-1 tag:0];
+            });
+            
+            //启动定时器
+            dispatch_resume(self.beatTimer);
+        }
 }
 
 /// 发送消息
@@ -90,6 +114,7 @@
     [dic setObject:host forKey:@"host"];
     [dic setObject:[NSString stringWithFormat:@"%d", port] forKey:@"port"];
     self.connectBlock(1, dic);
+    [self sendHeartBeat]; // 连接成功后开始发送心跳包
 }
 
 // 连接断开
@@ -107,6 +132,13 @@
     
     NSString *text = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
     NSLog(@"客户端接收到的text为--%@", text);
+    
+    // 在这里接收到服务器的心跳包
+//    if ([messageModel.beatID isEqualToString:HeartBeatID]) {
+//        NSLog(@"------------------接收到服务器心跳-------------------");
+//        return;
+//    }
+
     //连接成功或者收到消息，必须开始read，否则将无法收到消息
     //不read的话，缓存区将会被关闭
     // -1 表示无限时长 ， tag

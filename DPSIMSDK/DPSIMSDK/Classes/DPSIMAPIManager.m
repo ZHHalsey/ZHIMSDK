@@ -12,7 +12,7 @@
 - (void)initSDK{
 
     [[DPSIMSocketManager sharedInstance] socketConnect:^(int code, NSDictionary * _Nonnull resultDic) {
-        NSLog(@"code--%d, result--%@", code, resultDic);
+        NSLog(@"socket连接 code--   %d, result--%@", code, resultDic);
     }];
 }
 
