@@ -15,6 +15,6 @@ FOUNDATION_EXPORT const unsigned char DPSIMSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <DPSIMSDK/PublicHeader.h>
 
-// 对外开放的头文件
+// 对外头文件
 #import <DPSIMSDK/DPSIMAPI.h>
 
