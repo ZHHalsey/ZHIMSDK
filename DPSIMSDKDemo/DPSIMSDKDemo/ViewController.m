@@ -5,6 +5,11 @@
 //  Created by ZH on 2021/5/31.
 //
 
+
+#define socketHost @"192.168.0.43"
+#define socketPort 8211
+
+
 #import "ViewController.h"
 #import <DPSIMSDK/DPSIMAPI.h>
 
@@ -42,8 +47,10 @@
         NSLog(@"点击了初始化SDK");
         [DPSIMAPI initSDK];
     }else if (btn.tag == 1){
-        NSLog(@"点击了连接socket");
-        [DPSIMAPI initSDK];
+        NSLog(@"开始连接IP和端口Port");
+//        [DPSIMAPI socketConnectWithHost:socketHost Port:socketPort block:^(int code, NSDictionary * _Nonnull resultDic) {
+//            NSLog(@"回调code:%d, resultDic:%@", code, resultDic);
+//        }];
     }else if (btn.tag == 2){
         NSLog(@"点击了开始接收消息");
         [DPSIMAPI didReceivedMessage:^(int code, NSDictionary * _Nonnull resultDic) {

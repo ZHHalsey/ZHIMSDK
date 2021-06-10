@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// sdk初始化
 - (void)initSDK;
 
+/// 建立socket连接
+- (void)socketConnectWithHost:(NSString *)Host Port:(uint16_t)Port block:(void(^)(int code, NSDictionary *resultDic))block;
+
 /// 发送消息
 - (void)sendMessage:(NSString *)message withBlock:(void(^)(int code, NSDictionary *resultDic))sendMsgBlock;
 

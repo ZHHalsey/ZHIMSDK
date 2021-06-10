@@ -26,14 +26,14 @@
 @implementation DPSIMSocketManager
 
 /// 建立socket连接
-- (void)socketConnect:(void(^)(int code, NSDictionary *resultDic))block{
-    NSLog(@"开始连接socket");
+- (void)socketConnectWithHost:(NSString *)Host Port:(uint16_t)Port block:(void(^)(int code, NSDictionary *resultDic))block{
+    NSLog(@"开始连接socket,ip地址:%@, 端口:%d", Host, Port);
     self.connectBlock = block;
     // 创建socket
     if (self.clientSocket == nil){
         self.clientSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
     }
-    [self.clientSocket connectToHost:socketHost onPort:socketPort error:nil];
+    [self.clientSocket connectToHost:Host onPort:Port error:nil];
 }
 
 /// 断开socket连接
@@ -56,7 +56,8 @@
                 // 心跳包data
 //                NSData *beatData = [[NSData alloc]initWithBase64EncodedString:@"" options:NSDataBase64DecodingIgnoreUnknownCharacters];
                 NSData *beatData = [@"心跳包内容" dataUsingEncoding:NSUTF8StringEncoding];
-                [self.clientSocket writeData:beatData withTimeout:-1 tag:0];
+                [self.clientSocket writeData:beatData withTimeout:-1 tag:0]; // 发送数据给服务器
+                [self.clientSocket readDataWithTimeout:-1 tag:0]; // 从服务器读取数据
             });
             
             //启动定时器
@@ -108,18 +109,19 @@
 // 已经连接到服务器
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(nonnull NSString *)host port:(uint16_t)port{
     NSLog(@"连接成功, 服务器ip:%@, 端口:%d", host, port);
-    [self.clientSocket readDataWithTimeout:-1 tag:0];
+    [self.clientSocket readDataWithTimeout:-1 tag:0]; // 连接成功就从服务器读取数据
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [dic setObject:@"socket connect success" forKey:@"msg"];
     [dic setObject:host forKey:@"host"];
     [dic setObject:[NSString stringWithFormat:@"%d", port] forKey:@"port"];
     self.connectBlock(1, dic);
-    [self sendHeartBeat]; // 连接成功后开始发送心跳包
+//    [self sendHeartBeat]; // 连接成功后开始发送心跳包
 }
 
 // 连接断开
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err{
     NSLog(@"断开socket连接 原因:%@",err);
+    NSLog(@"断开socket连接 原因描述:%@",err.localizedDescription);
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [dic setObject:@"socket disConnect" forKey:@"msg"];
     [dic setObject:err forKey:@"error"];

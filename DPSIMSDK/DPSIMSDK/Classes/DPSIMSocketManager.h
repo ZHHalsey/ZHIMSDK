@@ -20,7 +20,7 @@ typedef void (^receivedMsgBlock)(int code, NSDictionary *resultDic);
 @property (nonatomic, copy)socketConnectBlock connectBlock;
 @property (nonatomic, copy)receivedMsgBlock receiveBlock;
 /// 建立socket连接
-- (void)socketConnect:(void(^)(int code, NSDictionary *resultDic))block;
+- (void)socketConnectWithHost:(NSString *)Host Port:(uint16_t)Port block:(void(^)(int code, NSDictionary *resultDic))block;
 
 /// 断开socket连接
 - (void)socketDisConnect;

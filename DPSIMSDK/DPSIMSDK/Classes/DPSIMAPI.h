@@ -21,6 +21,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)initSDK;
 
 /**
+ *  @brief                      建立socket连接
+ *  @param Host                 ip地址
+ *  @param Port                 端口
+ *  @param block                回调block
+ */
++ (void)socketConnectWithHost:(NSString *)Host Port:(uint16_t)Port block:(void(^)(int code, NSDictionary *resultDic))block;
+
+/**
  *  @brief                      发送消息
  *  @param message              发送的消息文本
  *  @param sendMsgBlock         回调block
