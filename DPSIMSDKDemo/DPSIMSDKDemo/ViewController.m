@@ -48,9 +48,9 @@
         [DPSIMAPI initSDK];
     }else if (btn.tag == 1){
         NSLog(@"开始连接IP和端口Port");
-//        [DPSIMAPI socketConnectWithHost:socketHost Port:socketPort block:^(int code, NSDictionary * _Nonnull resultDic) {
-//            NSLog(@"回调code:%d, resultDic:%@", code, resultDic);
-//        }];
+        [DPSIMAPI socketConnectWithHost:socketHost Port:socketPort block:^(int code, NSDictionary * _Nonnull resultDic) {
+            NSLog(@"回调code:%d, resultDic:%@", code, resultDic);
+        }];
     }else if (btn.tag == 2){
         NSLog(@"点击了开始接收消息");
         [DPSIMAPI didReceivedMessage:^(int code, NSDictionary * _Nonnull resultDic) {

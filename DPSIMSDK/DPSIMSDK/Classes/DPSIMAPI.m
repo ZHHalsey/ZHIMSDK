@@ -13,7 +13,7 @@
 
 // 接口test
 + (void)testLog{
-    NSLog(@"logTest----实时打印asd");
+    ZHLog(@"logTest----实时打印asd");
 }
 
 /// 初始化SDK

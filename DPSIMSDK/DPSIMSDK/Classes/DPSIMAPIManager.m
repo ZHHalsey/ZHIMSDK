@@ -11,7 +11,7 @@
 
 /// 初始化SDK
 - (void)initSDK{
-    NSLog(@"SDK初始化成功");
+    ZHLog(@"SDK初始化成功");
 }
 
 /// 建立socket连接
