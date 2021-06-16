@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"vc";
+    self.title = @"IM-Demo";
     self.view.backgroundColor = [UIColor grayColor];
 
     [self createUI];
@@ -34,7 +34,7 @@
         @"连接socket",
         @"开始接收消息",// 点击后才能收到消息
         @"发送消息",
-    ]; // 新功能直接往后加标题, demo中会自动从左往右创建相应的按钮
+    ];
     for (int i = 0; i< [btnArray count]; i++) {
         [self createButtonWithIdx:i Title:[btnArray objectAtIndex:i]];
     }
@@ -61,8 +61,6 @@
         [DPSIMAPI sendMessage:@"我是客户端发的消息asdfsdf" withBlock:^(int code, NSDictionary * _Nonnull resultDic) {
             NSLog(@"发送消息回调, code : %d, 字典 : %@", code, resultDic);
         }];
-        
-
     }else if (btn.tag == 4){
         
     }else if (btn.tag == 5){

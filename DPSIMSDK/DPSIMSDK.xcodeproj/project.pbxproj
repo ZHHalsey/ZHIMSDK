@@ -23,6 +23,26 @@
 		E2BCC53D2671E3E7000A908F /* DPSIMPrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = E2BCC53C2671E3E7000A908F /* DPSIMPrefixHeader.pch */; };
 		E2BCC5432671E55C000A908F /* DPSIMMessageModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E2BCC5412671E55C000A908F /* DPSIMMessageModel.h */; };
 		E2BCC5442671E55C000A908F /* DPSIMMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BCC5422671E55C000A908F /* DPSIMMessageModel.m */; };
+		E2DE01D62679D4DA00F1D656 /* DPSIMUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01D42679D4DA00F1D656 /* DPSIMUserDefaults.h */; };
+		E2DE01D72679D4DA00F1D656 /* DPSIMUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DE01D52679D4DA00F1D656 /* DPSIMUserDefaults.m */; };
+		E2DE01DF2679D8A400F1D656 /* DPSIMTools.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01DD2679D8A400F1D656 /* DPSIMTools.h */; };
+		E2DE01E02679D8A400F1D656 /* DPSIMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DE01DE2679D8A400F1D656 /* DPSIMTools.m */; };
+		E2DE01F12679D8EF00F1D656 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01E32679D8EF00F1D656 /* AFSecurityPolicy.h */; };
+		E2DE01F22679D8EF00F1D656 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01E42679D8EF00F1D656 /* AFNetworkReachabilityManager.h */; };
+		E2DE01F32679D8EF00F1D656 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01E52679D8EF00F1D656 /* AFURLSessionManager.h */; };
+		E2DE01F42679D8EF00F1D656 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01E62679D8EF00F1D656 /* AFURLRequestSerialization.h */; };
+		E2DE01F52679D8EF00F1D656 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DE01E72679D8EF00F1D656 /* AFURLResponseSerialization.m */; };
+		E2DE01F62679D8EF00F1D656 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DE01E82679D8EF00F1D656 /* AFHTTPSessionManager.m */; };
+		E2DE01F72679D8EF00F1D656 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01E92679D8EF00F1D656 /* AFURLResponseSerialization.h */; };
+		E2DE01F82679D8EF00F1D656 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DE01EA2679D8EF00F1D656 /* AFURLSessionManager.m */; };
+		E2DE01F92679D8EF00F1D656 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DE01EB2679D8EF00F1D656 /* AFURLRequestSerialization.m */; };
+		E2DE01FA2679D8EF00F1D656 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01EC2679D8EF00F1D656 /* AFNetworking.h */; };
+		E2DE01FB2679D8EF00F1D656 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DE01ED2679D8EF00F1D656 /* AFNetworkReachabilityManager.m */; };
+		E2DE01FC2679D8EF00F1D656 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DE01EE2679D8EF00F1D656 /* AFSecurityPolicy.m */; };
+		E2DE01FD2679D8EF00F1D656 /* AFCompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01EF2679D8EF00F1D656 /* AFCompatibilityMacros.h */; };
+		E2DE01FE2679D8EF00F1D656 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01F02679D8EF00F1D656 /* AFHTTPSessionManager.h */; };
+		E2DE02022679D91A00F1D656 /* DPSIMNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE02002679D91A00F1D656 /* DPSIMNetworking.h */; };
+		E2DE02032679D91A00F1D656 /* DPSIMNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DE02012679D91A00F1D656 /* DPSIMNetworking.m */; };
 		E2F6E46B266A20A30013FED3 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = E2F6E469266A20A30013FED3 /* GCDAsyncSocket.h */; };
 		E2F6E46C266A20A30013FED3 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F6E46A266A20A30013FED3 /* GCDAsyncSocket.m */; };
 /* End PBXBuildFile section */
@@ -70,6 +90,26 @@
 		E2BCC53C2671E3E7000A908F /* DPSIMPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMPrefixHeader.pch; sourceTree = "<group>"; };
 		E2BCC5412671E55C000A908F /* DPSIMMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMMessageModel.h; sourceTree = "<group>"; };
 		E2BCC5422671E55C000A908F /* DPSIMMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMMessageModel.m; sourceTree = "<group>"; };
+		E2DE01D42679D4DA00F1D656 /* DPSIMUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMUserDefaults.h; sourceTree = "<group>"; };
+		E2DE01D52679D4DA00F1D656 /* DPSIMUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMUserDefaults.m; sourceTree = "<group>"; };
+		E2DE01DD2679D8A400F1D656 /* DPSIMTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMTools.h; sourceTree = "<group>"; };
+		E2DE01DE2679D8A400F1D656 /* DPSIMTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMTools.m; sourceTree = "<group>"; };
+		E2DE01E32679D8EF00F1D656 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		E2DE01E42679D8EF00F1D656 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		E2DE01E52679D8EF00F1D656 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		E2DE01E62679D8EF00F1D656 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		E2DE01E72679D8EF00F1D656 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		E2DE01E82679D8EF00F1D656 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		E2DE01E92679D8EF00F1D656 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		E2DE01EA2679D8EF00F1D656 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		E2DE01EB2679D8EF00F1D656 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		E2DE01EC2679D8EF00F1D656 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		E2DE01ED2679D8EF00F1D656 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		E2DE01EE2679D8EF00F1D656 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		E2DE01EF2679D8EF00F1D656 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
+		E2DE01F02679D8EF00F1D656 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		E2DE02002679D91A00F1D656 /* DPSIMNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMNetworking.h; sourceTree = "<group>"; };
+		E2DE02012679D91A00F1D656 /* DPSIMNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMNetworking.m; sourceTree = "<group>"; };
 		E2F6E469266A20A30013FED3 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		E2F6E46A266A20A30013FED3 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +151,7 @@
 				E247F2102664D38C004CB12F /* Info.plist */,
 				E247F2692664D896004CB12F /* Classes */,
 				E2A254AE2665D1CD008CF85D /* Socket */,
+				E2BCC5472671EB92000A908F /* ThirdLib */,
 			);
 			path = DPSIMSDK;
 			sourceTree = "<group>";
@@ -198,8 +239,43 @@
 			isa = PBXGroup;
 			children = (
 				E2BCC53C2671E3E7000A908F /* DPSIMPrefixHeader.pch */,
+				E2DE01D42679D4DA00F1D656 /* DPSIMUserDefaults.h */,
+				E2DE01D52679D4DA00F1D656 /* DPSIMUserDefaults.m */,
+				E2DE01DD2679D8A400F1D656 /* DPSIMTools.h */,
+				E2DE01DE2679D8A400F1D656 /* DPSIMTools.m */,
+				E2DE02002679D91A00F1D656 /* DPSIMNetworking.h */,
+				E2DE02012679D91A00F1D656 /* DPSIMNetworking.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		E2BCC5472671EB92000A908F /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+				E2DE01E22679D8EF00F1D656 /* AFNetworking */,
+			);
+			path = ThirdLib;
+			sourceTree = "<group>";
+		};
+		E2DE01E22679D8EF00F1D656 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				E2DE01E32679D8EF00F1D656 /* AFSecurityPolicy.h */,
+				E2DE01E42679D8EF00F1D656 /* AFNetworkReachabilityManager.h */,
+				E2DE01E52679D8EF00F1D656 /* AFURLSessionManager.h */,
+				E2DE01E62679D8EF00F1D656 /* AFURLRequestSerialization.h */,
+				E2DE01E72679D8EF00F1D656 /* AFURLResponseSerialization.m */,
+				E2DE01E82679D8EF00F1D656 /* AFHTTPSessionManager.m */,
+				E2DE01E92679D8EF00F1D656 /* AFURLResponseSerialization.h */,
+				E2DE01EA2679D8EF00F1D656 /* AFURLSessionManager.m */,
+				E2DE01EB2679D8EF00F1D656 /* AFURLRequestSerialization.m */,
+				E2DE01EC2679D8EF00F1D656 /* AFNetworking.h */,
+				E2DE01ED2679D8EF00F1D656 /* AFNetworkReachabilityManager.m */,
+				E2DE01EE2679D8EF00F1D656 /* AFSecurityPolicy.m */,
+				E2DE01EF2679D8EF00F1D656 /* AFCompatibilityMacros.h */,
+				E2DE01F02679D8EF00F1D656 /* AFHTTPSessionManager.h */,
+			);
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,13 +285,24 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2DE01F32679D8EF00F1D656 /* AFURLSessionManager.h in Headers */,
+				E2DE01DF2679D8A400F1D656 /* DPSIMTools.h in Headers */,
+				E2DE01F22679D8EF00F1D656 /* AFNetworkReachabilityManager.h in Headers */,
 				E247F26D2664D8DD004CB12F /* DPSIMAPI.h in Headers */,
 				E2A254DB2665E561008CF85D /* DPSIMAPIManager.h in Headers */,
+				E2DE01F12679D8EF00F1D656 /* AFSecurityPolicy.h in Headers */,
 				E2BCC53D2671E3E7000A908F /* DPSIMPrefixHeader.pch in Headers */,
+				E2DE01D62679D4DA00F1D656 /* DPSIMUserDefaults.h in Headers */,
+				E2DE02022679D91A00F1D656 /* DPSIMNetworking.h in Headers */,
 				E247F2112664D38C004CB12F /* DPSIMSDK.h in Headers */,
+				E2DE01FA2679D8EF00F1D656 /* AFNetworking.h in Headers */,
+				E2DE01F72679D8EF00F1D656 /* AFURLResponseSerialization.h in Headers */,
+				E2DE01FE2679D8EF00F1D656 /* AFHTTPSessionManager.h in Headers */,
+				E2DE01FD2679D8EF00F1D656 /* AFCompatibilityMacros.h in Headers */,
 				E2A254C22665D59A008CF85D /* DPSIMSocketManager.h in Headers */,
 				E2BCC37F266E1624000A908F /* Person.pbobjc.h in Headers */,
 				E2A254BC2665D4FF008CF85D /* DPSIMSingleton.h in Headers */,
+				E2DE01F42679D8EF00F1D656 /* AFURLRequestSerialization.h in Headers */,
 				E2BCC5432671E55C000A908F /* DPSIMMessageModel.h in Headers */,
 				E2F6E46B266A20A30013FED3 /* GCDAsyncSocket.h in Headers */,
 			);
@@ -318,13 +405,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2DE01D72679D4DA00F1D656 /* DPSIMUserDefaults.m in Sources */,
 				E2BCC39B266E18F8000A908F /* Person.pbobjc.m in Sources */,
 				E2BCC5442671E55C000A908F /* DPSIMMessageModel.m in Sources */,
+				E2DE01F62679D8EF00F1D656 /* AFHTTPSessionManager.m in Sources */,
+				E2DE01E02679D8A400F1D656 /* DPSIMTools.m in Sources */,
+				E2DE01F92679D8EF00F1D656 /* AFURLRequestSerialization.m in Sources */,
+				E2DE01F52679D8EF00F1D656 /* AFURLResponseSerialization.m in Sources */,
+				E2DE01FB2679D8EF00F1D656 /* AFNetworkReachabilityManager.m in Sources */,
 				E2A254C32665D59A008CF85D /* DPSIMSocketManager.m in Sources */,
+				E2DE02032679D91A00F1D656 /* DPSIMNetworking.m in Sources */,
 				E2F6E46C266A20A30013FED3 /* GCDAsyncSocket.m in Sources */,
 				E2A254DC2665E561008CF85D /* DPSIMAPIManager.m in Sources */,
 				E247F26E2664D8DD004CB12F /* DPSIMAPI.m in Sources */,
+				E2DE01FC2679D8EF00F1D656 /* AFSecurityPolicy.m in Sources */,
 				E2A254BD2665D4FF008CF85D /* DPSIMSingleton.m in Sources */,
+				E2DE01F82679D8EF00F1D656 /* AFURLSessionManager.m in Sources */,
 				E2BCC382266E162B000A908F /* Person.proto in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

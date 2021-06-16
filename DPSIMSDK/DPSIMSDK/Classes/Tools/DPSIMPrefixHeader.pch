@@ -11,12 +11,17 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+// 全局头
+#import "DPSIMTools.h"
+#import "DPSIMNetworking.h"
 
 
+
+// 全局宏定义
 #define IsNULLString(string)    ((![string isKindOfClass:[NSString class]]) || [string isEqualToString:@""] || (string == nil) || [string isEqualToString:@""] || [string isKindOfClass:[NSNull class]] || [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0 || [string isEqualToString:@"(null)"] || [string isEqualToString:@"<null>"])
 
 # define ZHLog(FORMAT, ...) printf("[%s-%s][第%d行]%s\n", __DATE__, __TIME__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
-
+#define ZHUserDefaults          [NSUserDefaults standardUserDefaults]
 
 #endif /* DPSIMPrefixHeader_pch */

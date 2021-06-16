@@ -11,7 +11,7 @@
 
 @implementation DPSIMAPI
 
-// 接口test
+/// 接口test
 + (void)testLog{
     ZHLog(@"logTest----实时打印asd");
 }
@@ -19,6 +19,7 @@
 /// 初始化SDK
 + (void)initSDK{
     [[DPSIMAPIManager sharedInstance] initSDK];
+    ZHLog(@"---%@", [DPSIMTools getTmpPath]);
 }
 
 /// 建立socket连接
