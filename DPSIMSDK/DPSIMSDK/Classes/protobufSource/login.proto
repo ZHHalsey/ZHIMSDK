@@ -1,0 +1,65 @@
+///********************************************************************
+//*
+//*	filename: 	1001_2000_login.proto
+//*	purpose:	登陆相关消息
+//*   C与G:用户消息发到 R与G:rpc节点（游戏服、聊天服）网关 R与R:游戏到聊天
+//*
+//*********************************************************************/
+//package PROTO_LOGIN;
+//
+//option optimize_for = LITE_RUNTIME;
+//option java_package = "com.dpstorm.chat.message.msg";
+//option java_outer_classname = "LOGIN_MSG";
+
+syntax = "proto2";
+
+enum CMD_ID {
+
+    C2SLoginInMsgId  = 1001;   // 玩家登陆请求
+    S2CLoginMsgId  = 1002;   // 玩家登陆响应
+
+    C2SPingMsgId  = 1003;   // 玩家心跳请求
+    S2CPongMsgId  = 1004;   // 玩家心跳响应
+
+    C2SGetRecordMsgId  = 1005;   // 玩家获取消息记录请求
+    S2CGetRecordMsgId  = 1006;   // 玩家获取消息记录响应
+
+    C2SLogoutMsgId  = 1008;   //用户登出
+
+};
+
+message C2SLoginInMsg{
+	optional int64  playerId      = 1;	// 玩家ID
+    optional string token         = 2;  // 验证TOKEN
+}
+
+message S2CLoginMsg{
+	optional int32 code             = 1;	// 返回值 成功 1 失败 0
+	optional string msg             = 2;	// 返回消息
+	optional int64 playerId         = 3;	// 玩家ID
+}
+
+message C2SPingMsg{
+	optional int64 timeCurr         = 1;	//返回个时间戳
+}
+
+message S2CPongMsg{
+	optional int64 timeCurr         = 1;	//返回个时间戳
+}
+
+message C2SGetRecordMsg{
+	optional int64 playerId = 1;  // 玩家获取频道消息请求
+	optional string index = 2;  // 玩家本地索引数据，JSON串,如：{"world_01":211,"system_01":10}
+}
+
+message S2CGetRecordMsg{
+    optional int32 code = 1;	// 返回值 成功 1 失败 0
+	optional string msg = 2;	// 返回消息
+	optional string content = 3;	// 频道消息(JSON数组)
+	optional string channelCodes = 4;	// 玩家所有频道code,客户端无需关注
+}
+
+message C2SLogoutMsg{
+	optional int64 playerId = 1;	 // 玩家ID
+}
+

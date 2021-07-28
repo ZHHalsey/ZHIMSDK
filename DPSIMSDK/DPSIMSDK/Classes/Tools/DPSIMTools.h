@@ -23,6 +23,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// 沙盒tmp路径
 + (NSString *)getTmpPath;
 
+/// 获取devId
++ (NSString *)getDeviceId;
+
+/// 获取当前时间戳
++ (int64_t)getCurrentTime;
+
+/// 字典转Json串
++ (NSString *)dicToJsonStr:(NSDictionary *)dic;
+
+/// Json串转字典
++ (NSDictionary *)jsonStrToDic:(NSString *)jsonStr;
 
 @end
 

@@ -8,14 +8,20 @@
 #import "DPSIMMessageModel.h"
 
 @implementation DPSIMMessageModel
-
+/*
+ @property(nonatomic, copy)NSString *devId;
+ @property(nonatomic, copy)NSString *uid;
+ @property(nonatomic, copy)NSString *rid;
+ @property(nonatomic, copy)NSString *token;
+ */
 /// protobuf数据转成model
-+ (DPSIMMessageModel *)initWithProtobufModel:(Person *)model{
-    DPSIMMessageModel *dpsMessageModel = [[DPSIMMessageModel alloc]init];
-    dpsMessageModel.age = model.age;
-    dpsMessageModel.username = model.username;
-    dpsMessageModel.phone = model.phone;
-    return dpsMessageModel;
-}
+//+ (DPSIMMessageModel *)initWithProtobufModel:(MessageModel *)model{
+//    DPSIMMessageModel *dpsMessageModel = [[DPSIMMessageModel alloc]init];
+//    dpsMessageModel.devId = model.devId;
+//    dpsMessageModel.uid = model.uid;
+//    dpsMessageModel.rid = model.rid;
+//    dpsMessageModel.token = model.token;
+//    return dpsMessageModel;
+//}
 
 @end

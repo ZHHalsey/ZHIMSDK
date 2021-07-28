@@ -7,26 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2459680268181A600CE1089 /* DPSIMSocketDataMananger.h in Headers */ = {isa = PBXBuildFile; fileRef = E245967E268181A600CE1089 /* DPSIMSocketDataMananger.h */; };
+		E2459681268181A600CE1089 /* DPSIMSocketDataMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = E245967F268181A600CE1089 /* DPSIMSocketDataMananger.m */; };
+		E24596F3268339DC00CE1089 /* Login.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = E24596ED268339DC00CE1089 /* Login.pbobjc.h */; };
+		E24596F7268339DC00CE1089 /* Login.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = E24596F1268339DC00CE1089 /* Login.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E245970926833B4100CE1089 /* login.proto in Sources */ = {isa = PBXBuildFile; fileRef = E245970626833B4100CE1089 /* login.proto */; };
+		E245972326833CA200CE1089 /* Serv.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = E245972126833CA200CE1089 /* Serv.pbobjc.h */; };
+		E245972426833CA200CE1089 /* Serv.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = E245972226833CA200CE1089 /* Serv.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E245972726833CA900CE1089 /* serv.proto in Sources */ = {isa = PBXBuildFile; fileRef = E245972626833CA900CE1089 /* serv.proto */; };
+		E245973D2683516400CE1089 /* Chat.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = E245973B2683516400CE1089 /* Chat.pbobjc.h */; };
+		E245973E2683516400CE1089 /* Chat.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = E245973C2683516400CE1089 /* Chat.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E24597412683516C00CE1089 /* chat.proto in Sources */ = {isa = PBXBuildFile; fileRef = E24597402683516C00CE1089 /* chat.proto */; };
 		E247F2112664D38C004CB12F /* DPSIMSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E247F20F2664D38C004CB12F /* DPSIMSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E247F26D2664D8DD004CB12F /* DPSIMAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E247F26B2664D8DD004CB12F /* DPSIMAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E247F26E2664D8DD004CB12F /* DPSIMAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E247F26C2664D8DD004CB12F /* DPSIMAPI.m */; };
+		E25893082689B8450014190B /* Channel.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = E25893022689B8450014190B /* Channel.pbobjc.h */; };
+		E25893092689B8450014190B /* Channel.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = E25893072689B8450014190B /* Channel.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E258930C2689B84E0014190B /* channel.proto in Sources */ = {isa = PBXBuildFile; fileRef = E258930B2689B84E0014190B /* channel.proto */; };
+		E273C67C2684728C00B744D1 /* DPSIMAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = E273C67A2684728C00B744D1 /* DPSIMAlertView.h */; };
+		E273C67D2684728C00B744D1 /* DPSIMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E273C67B2684728C00B744D1 /* DPSIMAlertView.m */; };
+		E2754ED82679F50D00CF4BE0 /* DPSIMNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E2754ED42679F50D00CF4BE0 /* DPSIMNetworking.m */; };
+		E2754ED92679F50D00CF4BE0 /* DPSIMTools.h in Headers */ = {isa = PBXBuildFile; fileRef = E2754ED52679F50D00CF4BE0 /* DPSIMTools.h */; };
+		E2754EDA2679F50D00CF4BE0 /* DPSIMNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = E2754ED62679F50D00CF4BE0 /* DPSIMNetworking.h */; };
+		E2754EDB2679F50D00CF4BE0 /* DPSIMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E2754ED72679F50D00CF4BE0 /* DPSIMTools.m */; };
 		E2A254BC2665D4FF008CF85D /* DPSIMSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A254BA2665D4FF008CF85D /* DPSIMSingleton.h */; };
 		E2A254BD2665D4FF008CF85D /* DPSIMSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A254BB2665D4FF008CF85D /* DPSIMSingleton.m */; };
 		E2A254C22665D59A008CF85D /* DPSIMSocketManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A254C02665D59A008CF85D /* DPSIMSocketManager.h */; };
 		E2A254C32665D59A008CF85D /* DPSIMSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A254C12665D59A008CF85D /* DPSIMSocketManager.m */; };
 		E2A254DB2665E561008CF85D /* DPSIMAPIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A254D92665E561008CF85D /* DPSIMAPIManager.h */; };
 		E2A254DC2665E561008CF85D /* DPSIMAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A254DA2665E561008CF85D /* DPSIMAPIManager.m */; };
-		E2BCC37F266E1624000A908F /* Person.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = E2BCC37E266E1624000A908F /* Person.pbobjc.h */; };
-		E2BCC382266E162B000A908F /* Person.proto in Sources */ = {isa = PBXBuildFile; fileRef = E2BCC381266E162B000A908F /* Person.proto */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E2BCC396266E166F000A908F /* libProtocolBuffers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BCC38C266E165B000A908F /* libProtocolBuffers.a */; };
-		E2BCC39B266E18F8000A908F /* Person.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BCC39A266E18F8000A908F /* Person.pbobjc.m */; };
 		E2BCC53D2671E3E7000A908F /* DPSIMPrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = E2BCC53C2671E3E7000A908F /* DPSIMPrefixHeader.pch */; };
 		E2BCC5432671E55C000A908F /* DPSIMMessageModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E2BCC5412671E55C000A908F /* DPSIMMessageModel.h */; };
 		E2BCC5442671E55C000A908F /* DPSIMMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BCC5422671E55C000A908F /* DPSIMMessageModel.m */; };
 		E2DE01D62679D4DA00F1D656 /* DPSIMUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01D42679D4DA00F1D656 /* DPSIMUserDefaults.h */; };
 		E2DE01D72679D4DA00F1D656 /* DPSIMUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DE01D52679D4DA00F1D656 /* DPSIMUserDefaults.m */; };
-		E2DE01DF2679D8A400F1D656 /* DPSIMTools.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01DD2679D8A400F1D656 /* DPSIMTools.h */; };
-		E2DE01E02679D8A400F1D656 /* DPSIMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DE01DE2679D8A400F1D656 /* DPSIMTools.m */; };
 		E2DE01F12679D8EF00F1D656 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01E32679D8EF00F1D656 /* AFSecurityPolicy.h */; };
 		E2DE01F22679D8EF00F1D656 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01E42679D8EF00F1D656 /* AFNetworkReachabilityManager.h */; };
 		E2DE01F32679D8EF00F1D656 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01E52679D8EF00F1D656 /* AFURLSessionManager.h */; };
@@ -41,8 +56,6 @@
 		E2DE01FC2679D8EF00F1D656 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DE01EE2679D8EF00F1D656 /* AFSecurityPolicy.m */; };
 		E2DE01FD2679D8EF00F1D656 /* AFCompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01EF2679D8EF00F1D656 /* AFCompatibilityMacros.h */; };
 		E2DE01FE2679D8EF00F1D656 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE01F02679D8EF00F1D656 /* AFHTTPSessionManager.h */; };
-		E2DE02022679D91A00F1D656 /* DPSIMNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DE02002679D91A00F1D656 /* DPSIMNetworking.h */; };
-		E2DE02032679D91A00F1D656 /* DPSIMNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DE02012679D91A00F1D656 /* DPSIMNetworking.m */; };
 		E2F6E46B266A20A30013FED3 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = E2F6E469266A20A30013FED3 /* GCDAsyncSocket.h */; };
 		E2F6E46C266A20A30013FED3 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F6E46A266A20A30013FED3 /* GCDAsyncSocket.m */; };
 /* End PBXBuildFile section */
@@ -72,28 +85,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E245967E268181A600CE1089 /* DPSIMSocketDataMananger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMSocketDataMananger.h; sourceTree = "<group>"; };
+		E245967F268181A600CE1089 /* DPSIMSocketDataMananger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMSocketDataMananger.m; sourceTree = "<group>"; };
+		E24596ED268339DC00CE1089 /* Login.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.pbobjc.h; sourceTree = "<group>"; };
+		E24596F1268339DC00CE1089 /* Login.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.pbobjc.m; sourceTree = "<group>"; };
+		E245970626833B4100CE1089 /* login.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = login.proto; sourceTree = "<group>"; };
+		E245972126833CA200CE1089 /* Serv.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Serv.pbobjc.h; sourceTree = "<group>"; };
+		E245972226833CA200CE1089 /* Serv.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Serv.pbobjc.m; sourceTree = "<group>"; };
+		E245972626833CA900CE1089 /* serv.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = serv.proto; sourceTree = "<group>"; };
+		E245973B2683516400CE1089 /* Chat.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.pbobjc.h; sourceTree = "<group>"; };
+		E245973C2683516400CE1089 /* Chat.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat.pbobjc.m; sourceTree = "<group>"; };
+		E24597402683516C00CE1089 /* chat.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = chat.proto; sourceTree = "<group>"; };
 		E247F20C2664D38C004CB12F /* DPSIMSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DPSIMSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E247F20F2664D38C004CB12F /* DPSIMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMSDK.h; sourceTree = "<group>"; };
 		E247F2102664D38C004CB12F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E247F26B2664D8DD004CB12F /* DPSIMAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMAPI.h; sourceTree = "<group>"; };
 		E247F26C2664D8DD004CB12F /* DPSIMAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMAPI.m; sourceTree = "<group>"; };
+		E25893022689B8450014190B /* Channel.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.pbobjc.h; sourceTree = "<group>"; };
+		E25893072689B8450014190B /* Channel.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.pbobjc.m; sourceTree = "<group>"; };
+		E258930B2689B84E0014190B /* channel.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = channel.proto; sourceTree = "<group>"; };
+		E273C67A2684728C00B744D1 /* DPSIMAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMAlertView.h; sourceTree = "<group>"; };
+		E273C67B2684728C00B744D1 /* DPSIMAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMAlertView.m; sourceTree = "<group>"; };
+		E2754ED42679F50D00CF4BE0 /* DPSIMNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPSIMNetworking.m; sourceTree = "<group>"; };
+		E2754ED52679F50D00CF4BE0 /* DPSIMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPSIMTools.h; sourceTree = "<group>"; };
+		E2754ED62679F50D00CF4BE0 /* DPSIMNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPSIMNetworking.h; sourceTree = "<group>"; };
+		E2754ED72679F50D00CF4BE0 /* DPSIMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPSIMTools.m; sourceTree = "<group>"; };
 		E2A254BA2665D4FF008CF85D /* DPSIMSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMSingleton.h; sourceTree = "<group>"; };
 		E2A254BB2665D4FF008CF85D /* DPSIMSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMSingleton.m; sourceTree = "<group>"; };
 		E2A254C02665D59A008CF85D /* DPSIMSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMSocketManager.h; sourceTree = "<group>"; };
 		E2A254C12665D59A008CF85D /* DPSIMSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMSocketManager.m; sourceTree = "<group>"; };
 		E2A254D92665E561008CF85D /* DPSIMAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMAPIManager.h; sourceTree = "<group>"; };
 		E2A254DA2665E561008CF85D /* DPSIMAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMAPIManager.m; sourceTree = "<group>"; };
-		E2BCC37E266E1624000A908F /* Person.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.pbobjc.h; sourceTree = "<group>"; };
-		E2BCC381266E162B000A908F /* Person.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = Person.proto; sourceTree = "<group>"; };
 		E2BCC384266E165B000A908F /* ProtocolBuffers_iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolBuffers_iOS.xcodeproj; path = "../../../../Desktop/protobuf-3.17.1/objectivec/ProtocolBuffers_iOS.xcodeproj"; sourceTree = "<group>"; };
-		E2BCC39A266E18F8000A908F /* Person.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.pbobjc.m; sourceTree = "<group>"; };
 		E2BCC53C2671E3E7000A908F /* DPSIMPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMPrefixHeader.pch; sourceTree = "<group>"; };
 		E2BCC5412671E55C000A908F /* DPSIMMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMMessageModel.h; sourceTree = "<group>"; };
 		E2BCC5422671E55C000A908F /* DPSIMMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMMessageModel.m; sourceTree = "<group>"; };
 		E2DE01D42679D4DA00F1D656 /* DPSIMUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMUserDefaults.h; sourceTree = "<group>"; };
 		E2DE01D52679D4DA00F1D656 /* DPSIMUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMUserDefaults.m; sourceTree = "<group>"; };
-		E2DE01DD2679D8A400F1D656 /* DPSIMTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMTools.h; sourceTree = "<group>"; };
-		E2DE01DE2679D8A400F1D656 /* DPSIMTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMTools.m; sourceTree = "<group>"; };
 		E2DE01E32679D8EF00F1D656 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		E2DE01E42679D8EF00F1D656 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		E2DE01E52679D8EF00F1D656 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -108,8 +136,6 @@
 		E2DE01EE2679D8EF00F1D656 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
 		E2DE01EF2679D8EF00F1D656 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		E2DE01F02679D8EF00F1D656 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		E2DE02002679D91A00F1D656 /* DPSIMNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPSIMNetworking.h; sourceTree = "<group>"; };
-		E2DE02012679D91A00F1D656 /* DPSIMNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPSIMNetworking.m; sourceTree = "<group>"; };
 		E2F6E469266A20A30013FED3 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		E2F6E46A266A20A30013FED3 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +191,8 @@
 				E2A254DA2665E561008CF85D /* DPSIMAPIManager.m */,
 				E2A254C02665D59A008CF85D /* DPSIMSocketManager.h */,
 				E2A254C12665D59A008CF85D /* DPSIMSocketManager.m */,
+				E245967E268181A600CE1089 /* DPSIMSocketDataMananger.h */,
+				E245967F268181A600CE1089 /* DPSIMSocketDataMananger.m */,
 				E2A254BA2665D4FF008CF85D /* DPSIMSingleton.h */,
 				E2A254BB2665D4FF008CF85D /* DPSIMSingleton.m */,
 				E2BCC5362671E326000A908F /* Model */,
@@ -195,7 +223,10 @@
 		E2BCC37C266E15FF000A908F /* protobufSource */ = {
 			isa = PBXGroup;
 			children = (
-				E2BCC381266E162B000A908F /* Person.proto */,
+				E245970626833B4100CE1089 /* login.proto */,
+				E24597402683516C00CE1089 /* chat.proto */,
+				E258930B2689B84E0014190B /* channel.proto */,
+				E245972626833CA900CE1089 /* serv.proto */,
 			);
 			path = protobufSource;
 			sourceTree = "<group>";
@@ -203,8 +234,14 @@
 		E2BCC37D266E15FF000A908F /* protobufOut */ = {
 			isa = PBXGroup;
 			children = (
-				E2BCC37E266E1624000A908F /* Person.pbobjc.h */,
-				E2BCC39A266E18F8000A908F /* Person.pbobjc.m */,
+				E24596ED268339DC00CE1089 /* Login.pbobjc.h */,
+				E24596F1268339DC00CE1089 /* Login.pbobjc.m */,
+				E245973B2683516400CE1089 /* Chat.pbobjc.h */,
+				E245973C2683516400CE1089 /* Chat.pbobjc.m */,
+				E25893022689B8450014190B /* Channel.pbobjc.h */,
+				E25893072689B8450014190B /* Channel.pbobjc.m */,
+				E245972126833CA200CE1089 /* Serv.pbobjc.h */,
+				E245972226833CA200CE1089 /* Serv.pbobjc.m */,
 			);
 			path = protobufOut;
 			sourceTree = "<group>";
@@ -241,10 +278,12 @@
 				E2BCC53C2671E3E7000A908F /* DPSIMPrefixHeader.pch */,
 				E2DE01D42679D4DA00F1D656 /* DPSIMUserDefaults.h */,
 				E2DE01D52679D4DA00F1D656 /* DPSIMUserDefaults.m */,
-				E2DE01DD2679D8A400F1D656 /* DPSIMTools.h */,
-				E2DE01DE2679D8A400F1D656 /* DPSIMTools.m */,
-				E2DE02002679D91A00F1D656 /* DPSIMNetworking.h */,
-				E2DE02012679D91A00F1D656 /* DPSIMNetworking.m */,
+				E2754ED62679F50D00CF4BE0 /* DPSIMNetworking.h */,
+				E2754ED42679F50D00CF4BE0 /* DPSIMNetworking.m */,
+				E2754ED52679F50D00CF4BE0 /* DPSIMTools.h */,
+				E2754ED72679F50D00CF4BE0 /* DPSIMTools.m */,
+				E273C67A2684728C00B744D1 /* DPSIMAlertView.h */,
+				E273C67B2684728C00B744D1 /* DPSIMAlertView.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -286,24 +325,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2DE01F32679D8EF00F1D656 /* AFURLSessionManager.h in Headers */,
-				E2DE01DF2679D8A400F1D656 /* DPSIMTools.h in Headers */,
 				E2DE01F22679D8EF00F1D656 /* AFNetworkReachabilityManager.h in Headers */,
 				E247F26D2664D8DD004CB12F /* DPSIMAPI.h in Headers */,
 				E2A254DB2665E561008CF85D /* DPSIMAPIManager.h in Headers */,
+				E245973D2683516400CE1089 /* Chat.pbobjc.h in Headers */,
 				E2DE01F12679D8EF00F1D656 /* AFSecurityPolicy.h in Headers */,
 				E2BCC53D2671E3E7000A908F /* DPSIMPrefixHeader.pch in Headers */,
 				E2DE01D62679D4DA00F1D656 /* DPSIMUserDefaults.h in Headers */,
-				E2DE02022679D91A00F1D656 /* DPSIMNetworking.h in Headers */,
 				E247F2112664D38C004CB12F /* DPSIMSDK.h in Headers */,
+				E2754EDA2679F50D00CF4BE0 /* DPSIMNetworking.h in Headers */,
 				E2DE01FA2679D8EF00F1D656 /* AFNetworking.h in Headers */,
 				E2DE01F72679D8EF00F1D656 /* AFURLResponseSerialization.h in Headers */,
 				E2DE01FE2679D8EF00F1D656 /* AFHTTPSessionManager.h in Headers */,
 				E2DE01FD2679D8EF00F1D656 /* AFCompatibilityMacros.h in Headers */,
+				E273C67C2684728C00B744D1 /* DPSIMAlertView.h in Headers */,
 				E2A254C22665D59A008CF85D /* DPSIMSocketManager.h in Headers */,
-				E2BCC37F266E1624000A908F /* Person.pbobjc.h in Headers */,
+				E2459680268181A600CE1089 /* DPSIMSocketDataMananger.h in Headers */,
+				E2754ED92679F50D00CF4BE0 /* DPSIMTools.h in Headers */,
 				E2A254BC2665D4FF008CF85D /* DPSIMSingleton.h in Headers */,
 				E2DE01F42679D8EF00F1D656 /* AFURLRequestSerialization.h in Headers */,
+				E24596F3268339DC00CE1089 /* Login.pbobjc.h in Headers */,
 				E2BCC5432671E55C000A908F /* DPSIMMessageModel.h in Headers */,
+				E25893082689B8450014190B /* Channel.pbobjc.h in Headers */,
+				E245972326833CA200CE1089 /* Serv.pbobjc.h in Headers */,
 				E2F6E46B266A20A30013FED3 /* GCDAsyncSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,22 +450,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2DE01D72679D4DA00F1D656 /* DPSIMUserDefaults.m in Sources */,
-				E2BCC39B266E18F8000A908F /* Person.pbobjc.m in Sources */,
+				E2754ED82679F50D00CF4BE0 /* DPSIMNetworking.m in Sources */,
 				E2BCC5442671E55C000A908F /* DPSIMMessageModel.m in Sources */,
 				E2DE01F62679D8EF00F1D656 /* AFHTTPSessionManager.m in Sources */,
-				E2DE01E02679D8A400F1D656 /* DPSIMTools.m in Sources */,
+				E24597412683516C00CE1089 /* chat.proto in Sources */,
 				E2DE01F92679D8EF00F1D656 /* AFURLRequestSerialization.m in Sources */,
 				E2DE01F52679D8EF00F1D656 /* AFURLResponseSerialization.m in Sources */,
 				E2DE01FB2679D8EF00F1D656 /* AFNetworkReachabilityManager.m in Sources */,
+				E2754EDB2679F50D00CF4BE0 /* DPSIMTools.m in Sources */,
 				E2A254C32665D59A008CF85D /* DPSIMSocketManager.m in Sources */,
-				E2DE02032679D91A00F1D656 /* DPSIMNetworking.m in Sources */,
+				E273C67D2684728C00B744D1 /* DPSIMAlertView.m in Sources */,
+				E245972426833CA200CE1089 /* Serv.pbobjc.m in Sources */,
 				E2F6E46C266A20A30013FED3 /* GCDAsyncSocket.m in Sources */,
+				E245973E2683516400CE1089 /* Chat.pbobjc.m in Sources */,
+				E24596F7268339DC00CE1089 /* Login.pbobjc.m in Sources */,
+				E2459681268181A600CE1089 /* DPSIMSocketDataMananger.m in Sources */,
 				E2A254DC2665E561008CF85D /* DPSIMAPIManager.m in Sources */,
 				E247F26E2664D8DD004CB12F /* DPSIMAPI.m in Sources */,
+				E25893092689B8450014190B /* Channel.pbobjc.m in Sources */,
 				E2DE01FC2679D8EF00F1D656 /* AFSecurityPolicy.m in Sources */,
+				E258930C2689B84E0014190B /* channel.proto in Sources */,
+				E245970926833B4100CE1089 /* login.proto in Sources */,
 				E2A254BD2665D4FF008CF85D /* DPSIMSingleton.m in Sources */,
 				E2DE01F82679D8EF00F1D656 /* AFURLSessionManager.m in Sources */,
-				E2BCC382266E162B000A908F /* Person.proto in Sources */,
+				E245972726833CA900CE1089 /* serv.proto in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +606,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = /Users/dpstorm/ZHIMSDK/DPSIMSDK/DPSIMSDK/Classes/Tools/DPSIMPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/dpstorm/DPSIMSDK_IOS/DPSIMSDK/DPSIMSDK/Classes/Tools/DPSIMPrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(PROJECT)/Protobuf";
 				INFOPLIST_FILE = DPSIMSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -578,7 +630,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = /Users/dpstorm/ZHIMSDK/DPSIMSDK/DPSIMSDK/Classes/Tools/DPSIMPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/dpstorm/DPSIMSDK_IOS/DPSIMSDK/DPSIMSDK/Classes/Tools/DPSIMPrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(PROJECT)/Protobuf";
 				INFOPLIST_FILE = DPSIMSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

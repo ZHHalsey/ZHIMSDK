@@ -1,0 +1,262 @@
+///********************************************************************
+//*
+//*	filename: 	3001_4000_scene.proto
+//*	purpose:	chat相关消息
+//*   C与G:用户消息发到 R与G:rpc节点（游戏服、聊天服）网关 R与R:游戏到聊天
+//*
+//*********************************************************************/
+//package PROTO_CHANNEL;
+//
+//option optimize_for = LITE_RUNTIME;
+//option java_package = "com.dpstorm.chat.message.msg";
+//option java_outer_classname = "CHANNEL_MSG";
+
+
+syntax = "proto2";
+
+enum CMD_ID_CHANNEL {
+
+    C2SGetChannelInfoId  = 3001;   // 查询频道详情
+    S2CGetChannelInfoId  = 3002;   //
+
+    C2SGetChannelMemberId = 3003;   // 查询频道成员
+    S2CGetChannelMemberId = 3004;
+
+    C2SCreateChannelId = 3005;   // 创建频道
+    S2CCreateChannelId = 3006;
+    S2CJoinChannelNoticeId = 3007;
+    C2SJoinChannelNoticeId = 3008;
+
+    C2SDepartureChannelId = 3009;   // 离开频道
+    S2CDepartureChannelId = 3010;
+    S2CDepartureChannelNoticeId = 3011;
+    C2SDepartureChannelNoticeId = 3012;
+
+    C2SKickChannelMemberId = 3013;   // 踢出频道
+    S2CKickChannelMemberId = 3014;
+    S2CKickChannelMemberNoticeId = 3015;
+    C2SKickChannelMemberNoticeId = 3016;
+
+    C2SDestroyChannelId = 3017;   // 销毁频道
+    S2CDestroyChannelId = 3018;   // 销毁频道响应
+    S2CDestroyChannelWarnNoticeId = 3019;  // 频道即将销毁通知
+    S2CDestroyChannelNoticeId = 3020;  // 频道已销毁通知
+
+    C2SInviteChannelMemberId = 3021;   // 邀请加入频道
+    S2CInviteChannelMemberId = 3022;
+    S2CInviteChannelMemberNoticeId = 3023;  // 被邀请加入频道通知
+
+    C2SJoinChannelId = 3025;   // 加入频道
+    S2CJoinChannelId = 3026;
+
+    C2SModifyChannelNameId = 3027;   // 修改频道名称
+    S2CModifyChannelNameId = 3028;
+    S2CModifyChannelNameNoticeId = 3029;
+    C2SModifyChannelNameNoticeId = 3030;
+
+    C2SModifyChannelDescId = 3031;   // 修改频道描述
+    S2CModifyChannelDescId = 3032;
+    S2CModifyChannelDescNoticeId = 3033;
+    C2SModifyChannelDescNoticeId = 3034;
+
+};
+
+message C2SGetChannelTypeMsg{
+	optional int64 playerId  = 1;	// 玩家ID
+	optional int64 channelId  = 2;	// 频道ID
+	optional string channelCode  = 3;	// 频道CODE
+}
+
+message S2CGetChannelTypeMsg{
+    optional int32 code = 1;	// 返回值 成功 1 失败 0
+	optional string msg = 2;	// 返回消息
+	optional string content     = 4;	//返回频道详情
+}
+
+message C2SGetChannelMemberMsg{
+	optional int64 requestId  = 1;	// 玩家ID
+	optional int64 playerId  = 2;	// 玩家ID
+	optional int64 channelId  = 3;	// 频道ID
+	optional string channelCode  = 4;	// 频道CODE
+}
+
+message S2CGetChannelMemberMsg{
+    optional int32 code = 1;	// 返回值 成功 1 失败 0
+	optional string msg = 2;	// 返回消息
+	optional int64 requestId  = 3;	// 玩家ID
+	optional string content     = 4;	//返回频道成员信息
+}
+
+message C2SCreateChannelMsg{
+	optional int64 requestId  = 1;	// 玩家ID
+	optional int64 playerId  = 2;	// 玩家ID
+	optional string channelTypeCode  = 3;	// 频道类目编码
+	optional string channelName  = 4;	// 频道名称
+	optional string channelDesc  = 5;	// 频道描述
+	optional string memberIds  = 6;	// 频道成员ID,逗号拼接
+}
+
+message S2CCreateChannelMsg{
+    optional int32 code = 1;	// 返回值 成功 1 失败 0
+	optional string msg = 2;	// 返回消息
+	optional int64 requestId  = 3;	// 玩家ID
+	optional int64 channelId     = 4;	// 返回创建频道Id
+	optional string channelCode     = 5;	//返回创建频道Code
+}
+
+message S2CJoinChannelNotice{
+	optional int64 channelId = 1;	// 频道Id
+	optional string channelCode = 2;  // 频道编码，客户端无需关注
+	optional string memberIds = 3;  // 频道成员ID，客户端无需关注
+	optional int64 inviter  = 4;	// 邀请人玩家ID，非必须
+	optional string content = 5;  // 频道信息(JSON数组)
+}
+
+message C2SDepartureChannelMsg{
+	optional int64 requestId  = 1;	// 玩家ID
+	optional int64 playerId  = 2;	// 玩家ID
+	optional int64 channelId     = 3;	// 返回创建频道Id
+	optional string channelCode     = 4;	//返回创建频道Code
+}
+
+message S2CDepartureChannelMsg{
+    optional int32 code = 1;	// 返回值 成功 1 失败 0
+	optional string msg = 2;	// 返回消息
+	optional int64 requestId  = 3;	// 玩家ID
+	optional int64 playerId  = 4;	// 玩家ID
+	optional int64 channelId = 5;	// 返回创建频道Id
+	optional string channelCode = 6;	//返回创建频道Code
+}
+
+message S2CDepartureChannelNoticeMsg{
+	optional int64 playerId  = 1;	// 玩家ID
+	optional int64 channelId = 2;	// 返回创建频道Id
+	optional string channelCode = 3;	//返回创建频道Code
+}
+
+
+message C2SKickChannelMemberMsg{
+	optional int64 requestId  = 1;	// 客户端请求ID
+	optional int64 playerId  = 2;	// 玩家ID
+	optional int64 channelId     = 3;	// 频道Id
+	optional string channelCode     = 4;	// 频道Code
+	optional int64 targetPlayerId     = 5;	// 目标玩家ID
+}
+
+message S2CKickChannelMemberMsg{
+    optional int32 code = 1;	// 返回值 成功 1 失败 0
+	optional string msg = 2;	// 返回消息
+	optional int64 requestId  = 3;	// 玩家ID
+	optional int64 playerId  = 4;	// 玩家ID
+	optional int64 channelId     = 5;	// 频道Id
+	optional string channelCode     = 6;	// 频道Code
+	optional int64 targetPlayerId     = 7;	// 目标玩家ID
+}
+
+message S2CKickChannelMemberNoticeMsg{
+	optional int64 channelId     = 1;	// 频道Id
+	optional string channelCode     = 2;	// 频道Code
+	optional int64 targetPlayerId     = 3;	// 目标玩家ID
+}
+
+
+
+message C2SInviteChannelMemberMsg{
+	optional int64 requestId  = 1;	// 客户端请求ID
+	optional int64 playerId  = 2;	// 玩家ID
+	optional int64 channelId     = 3;	// 频道Id
+	optional string channelCode     = 4;	// 频道Code
+	optional string targetPlayerIds     = 5;	// 目标玩家ID，多个逗号拼接
+}
+
+message S2CInviteChannelMemberMsg{
+    optional int32 code = 1;	// 返回值 成功 1 失败 0
+	optional string msg = 2;	// 返回消息
+	optional int64 requestId  = 3;	// 客户端请求ID
+	optional int64 playerId  = 4;	// 玩家ID
+	optional int64 channelId     = 5;	// 频道Id
+	optional string channelCode     = 6;	// 频道Code
+	optional string targetPlayerIds     = 7;	// 目标玩家ID，多个逗号拼接
+}
+
+message S2CInviteChannelMemberNoticeMsg{
+	optional int64 playerId = 1;	// 玩家ID
+	optional int64 channelId = 2;	// 频道Id
+	optional string channelCode = 3;	// 频道Code
+	optional int64 inviter = 4;	// 目标玩家ID，多个逗号拼接
+	optional string content = 5;  // 频道信息(JSON数组)
+}
+
+message C2SJoinChannelMsg{
+	optional int64 requestId  = 1;	// 客户端请求ID
+	optional int64 playerId  = 2;	// 玩家ID
+	optional int64 channelId     = 3;	// 频道Id
+	optional string channelCode     = 4;	// 频道Code
+	optional int64 inviter     = 5;	// 目标玩家ID
+}
+
+message S2CJoinChannelMsg{
+    optional int32 code = 1;	// 返回值 成功 1 失败 0
+	optional string msg = 2;	// 返回消息
+	optional int64 requestId  = 3;	// 客户端请求ID
+	optional int64 playerId  = 4;	// 玩家ID
+	optional int64 channelId     = 5;	// 频道Id
+	optional string channelCode     = 6;	// 频道Code
+	optional int64 inviter     = 7;	// 邀请人玩家ID，非必须
+}
+
+message C2SModifyChannelNameMsg{
+	optional int64 requestId  = 1;	// 客户端请求ID
+	optional int64 playerId  = 2;	// 玩家ID
+	optional int64 channelId     = 3;	// 频道Id
+	optional string channelCode     = 4;	// 频道Code
+	optional string channelName = 5;	// 修改名字
+}
+
+message S2CModifyChannelNameMsg{
+    optional int32 code = 1;	// 返回值 成功 1 失败 0
+	optional string msg = 2;	// 返回消息
+	optional int64 requestId = 3;	// 客户端请求ID
+	optional int64 playerId = 4;	// 玩家ID
+	optional int64 channelId = 5;	// 频道Id
+	optional string channelCode = 6;	// 频道Code
+	optional string channelName = 7;	// 目标玩家ID，多个逗号拼接
+}
+
+message S2CModifyChannelNameNoticeMsg{
+	optional int64 playerId = 1;	// 玩家ID
+	optional int64 channelId = 2;	// 频道Id
+	optional string channelCode = 3;	// 频道Code
+	optional string channelName = 4;	// 目标玩家ID，多个逗号拼接
+	optional int64 modifierId = 5;  // 修改名称玩家ID
+	optional string modifierRoleName = 6;  // 修改名称玩家角色名
+	optional string modifierNickName = 7;  // 修改名称玩家频道昵称
+}
+
+message C2SModifyChannelDescMsg{
+	optional int64 requestId  = 1;	// 客户端请求ID
+	optional int64 playerId  = 2;	// 玩家ID
+	optional int64 channelId     = 3;	// 频道Id
+	optional string channelCode     = 4;	// 频道Code
+	optional string channelDesc = 5;	// 修改名字
+}
+
+message S2CModifyChannelDescMsg{
+    optional int32 code = 1;	// 返回值 成功 1 失败 0
+	optional string msg = 2;	// 返回消息
+	optional int64 requestId = 3;	// 客户端请求ID
+	optional int64 playerId = 4;	// 玩家ID
+	optional int64 channelId = 5;	// 频道Id
+	optional string channelCode = 6;	// 频道Code
+	optional string channelDesc = 7;	// 目标玩家ID，多个逗号拼接
+}
+
+message S2CModifyChannelDescNoticeMsg{
+	optional int64 playerId = 1;	// 玩家ID
+	optional int64 channelId = 2;	// 频道Id
+	optional string channelCode = 3;	// 频道Code
+	optional string channelDesc = 4;	// 目标玩家ID，多个逗号拼接
+	optional int64 modifierId = 5;  // 修改描述玩家ID
+	optional string modifierRoleName = 6;  // 修改描述玩家角色名
+	optional string modifierNickName = 7;  // 修改描述玩家频道昵称
+}

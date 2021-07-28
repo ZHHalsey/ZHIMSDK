@@ -1,0 +1,59 @@
+///********************************************************************
+//*
+//*	filename: 	0001_1000_serv.proto
+//*	purpose:	服务器内部消息
+//*   C与G:用户消息发到 R与G:rpc节点（游戏服、聊天服）网关 R与R:游戏到聊天
+//*
+//*********************************************************************/
+//package PROTO_SERV;
+//
+//option optimize_for = LITE_RUNTIME;
+//option java_package = "com.dpstorm.chat.message.msg";
+//option java_outer_classname = "SERV_MSG";
+
+syntax = "proto2";
+
+enum CMD_ID_SERV {
+	R2GClientOnlineMsgId			 = 100; //rpc节点上线后通知网关
+	G2RClientOnlineMsgId             = 101; //rpc节点上线后通知网关的回复
+
+    R2GPingMsgId				     = 102; //rpc到gate的ping消息
+	G2RPongMsgId                     = 103; //
+
+	G2RCommonMsgId                   = 201; //网关向rpc发的包装消息
+	R2GCommonMsgId                   = 202; //游戏向rpc发的包装消息
+}
+	
+message R2GClientOnlineMsg{
+	optional string name            = 1;	//唯一名称 nodeType.nodeId
+	optional int32 nodeId           = 2;	//远程节点id
+    optional string nodeType        = 3;	//远程节点名称
+    optional int32 keepAlive        = 4;    //存活时间
+}
+
+message G2RClientOnlineMsg{
+	optional string nodeName        = 1;	//节点名称
+}
+
+message R2GPingMsg{
+	optional string nodeName        = 1;	//节点名称
+}
+
+message G2RPongMsg{
+	optional string nodeName        = 1;	//节点名称
+}
+
+message G2RCommonMsg{
+	optional string fromNode        = 1;	//从哪个gate来的
+    optional int64 playerId         = 2;	//定位是哪个channel的
+	optional int32 msgId            = 3;	//包装的msgId
+    optional bytes msg              = 4;	//上一个消息
+}
+
+message R2GCommonMsg{
+    optional int64 playerId         = 1;	//定位是哪个channel的
+    optional string channelCode     = 2;	//群发消息有channelCode
+    optional string filterPlayerIds     = 3;	//群发消息过滤接受玩家
+	optional int32 msgId            = 4;	//包装的msgId
+    optional bytes msg              = 5;	//上一个消息
+}

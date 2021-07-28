@@ -1,0 +1,123 @@
+///********************************************************************
+//*
+//*	filename: 	2001_3000_chat.proto
+//*	purpose:	chat相关消息
+//*   C与G:用户消息发到 R与G:rpc节点（游戏服、聊天服）网关 R与R:游戏到聊天
+//*
+//*********************************************************************/
+//package PROTO_CHAT;
+//
+//option optimize_for = LITE_RUNTIME;
+//option java_package = "com.dpstorm.chat.message.msg";
+//option java_outer_classname = "CHAT_MSG";
+
+syntax = "proto2";
+
+enum CMD_ID_CHAT {
+    C2SPrivateChatMsgId  = 2001;   // 私聊消息请求
+    S2CPrivateChatMsgId  = 2002;   // 私聊消息响应
+    S2CPrivateChatNoticeId  = 2003;     // 私聊消息通知
+    C2SPrivateChatNoticeId  = 2004;     // 私聊消息通知回复
+
+    C2SGroupChatMsgId  = 2005;     // 群聊消息请求
+    S2CGroupChatMsgId  = 2006;     // 群聊消息响应
+    S2CGroupChatNoticeId  = 2007;     // 群聊消息通知
+    C2GroupChatNoticeId  = 2008;     // 群聊消息通知回复
+
+};
+
+message C2SPrivateChatMsg{
+	optional int64 clientMsgId        = 1;	// 客户端消息id，用于确认消息响应（有序）
+    optional int32 clientSendTime     = 2;	// 客户端发出时间戳（秒）
+	optional int32 senderType     = 3;	// 发送方类型 1：玩家 2：系统
+	optional int64 fromPlayerId  = 4;   //用户id
+    optional int32 businessType = 5;	// 业务类型  1:IM  2:游戏
+	optional int64 toPlayerId       = 6;	// 接收玩家id
+	optional string msgType = 7;	// 消息类型 TEXT | IMAGE | VOICE | VIDEO
+    optional string msgBody     = 8;	// 消息体
+    optional string extensionInfo     = 9;	// 扩展消息内容
+    optional int32 serverReceiveTime     = 10;	// 服务端接收时间，客户端无需关注
+}
+
+message S2CPrivateChatMsg{
+    optional int32 code = 1;	// 返回值 成功 1 失败 0
+	optional string msg = 2;	// 返回消息
+    optional int64 fromPlayerId     = 3;	// 用户id
+	optional int64 toPlayerId       = 4;	//用户id
+    optional int64 clientMsgId        = 5;	// 客户端消息id
+    optional int64 serverMsgId        = 6;	// 服务端消息id（全局有序？频道有序）
+    optional int32 clientSendTime     = 7;	// 客户端发出时间戳（秒）
+    optional int32 serverReceiveTime     = 8;	// 服务端接收时间戳（秒）
+    optional int32 serverSendTime     = 9;	// 服务端发出时间戳（秒）
+}
+
+message S2CPrivateChatNotice{
+	optional int64 clientMsgId        = 1;	// 客户端消息id，用于确认消息响应（有序）
+    optional int32 clientSendTime     = 2;	// 客户端发出时间戳（秒）
+	optional int32 senderType     = 3;	// 发送方类型 1：玩家 2：系统
+	optional int64 fromPlayerId  = 4;   //用户id
+	optional string fromPlayerRoleName  = 5;   // 用户角色名，客户端无需关注
+	optional string fromPlayerNickName  = 6;   // 用户角色昵称，客户端无需关注
+	optional string fromPlayerPortrait  = 7;   // 用户头像，客户端无需关注
+    optional int32 businessType = 8;	// 业务类型  1:IM  2:游戏
+	optional int64 toPlayerId       = 9;	// 接收玩家id
+	optional string msgType = 10;	// 消息类型 TEXT | IMAGE | VOICE | VIDEO
+    optional string msgBody     = 11;	// 消息体
+    optional string extensionInfo     = 12;	// 扩展消息内容
+    optional int32 serverSendTime     = 13;	// 服务端接收时间，客户端无需关注
+}
+
+// ====================================群聊====================================
+
+message C2SGroupChatMsg{
+	optional int64 clientMsgId        = 1;	// 客户端消息id，用于确认消息响应（有序）
+    optional int32 clientSendTime     = 2;	// 客户端发出时间戳（秒）
+	optional int32 senderType     = 3;	// 发送方类型 1：玩家（默认）  2：系统
+	optional int64 fromPlayerId  = 4;   //用户id
+	optional string atPlayerIds  = 5;   // @玩家id，多个逗号拼接
+    optional int32 businessType = 6;	// 业务类型  1:IM（默认）  2:游戏
+	optional int64 channelId     = 7;	// 频道Code
+	optional string channelCode     = 8;	// 频道Code
+	optional string msgType = 9;	// 消息类型 TEXT | IMAGE | VOICE | VIDEO
+    optional string msgBody     = 10;	// 消息体
+    optional string extensionInfo   = 11;	// 扩展消息内容
+    optional int32 serverReceiveTime     = 12;	// 服务端接收时间，客户端无需关注
+}
+
+message S2CGroupChatMsg{
+    optional int32 code = 1;	// 返回值 成功 1 失败 0
+	optional string msg = 2;	// 返回消息
+    optional int64 fromPlayerId     = 3;	// 用户id
+	optional int64 channelId       = 4;	// 群聊id
+	optional string channelCode       = 5;	// 群聊Code
+    optional int64 clientMsgId        = 6;	// 客户端消息id
+    optional int64 serverMsgId        = 7;	// 服务端消息id（全局有序？频道有序）
+    optional int32 clientSendTime     = 8;	// 客户端发出时间戳（秒）
+    optional int32 serverReceiveTime     = 9;	// 服务端接收时间戳（秒）
+    optional int32 serverSendTime     = 10;	// 服务端发出时间戳（秒）
+}
+
+message S2CGroupChatNotice{
+	optional int64 clientMsgId        = 1;	// 客户端消息id，用于确认消息响应（有序）
+    optional int32 clientSendTime     = 2;	// 客户端发出时间戳（秒）
+	optional int32 senderType     = 3;	// 发送方类型  1：玩家  2：系统
+	optional int64 fromPlayerId  = 4;   //用户id
+	optional string fromPlayerInfo = 5;  // 发送方展示信息，JSON字段方便扩展[{"roleName":"","nickName":"","portrait":""}]
+	optional string atPlayerIds  = 6;   // @玩家id，多个逗号拼接
+    optional int32 businessType = 7;	// 业务类型  1:IM  2:游戏
+	optional int64 channelId     = 9;	// 频道Code
+	optional string channelCode     = 10;	// 频道Code
+	optional string msgType = 11;	// 消息类型 TEXT | IMAGE | VOICE | VIDEO
+    optional string msgBody     = 12;	// 消息体
+    optional string extensionInfo     = 13;	// 扩展消息内容
+    optional int64 serverMsgId        = 14;	// 服务端消息id（全局有序？频道有序）
+    optional int32 serverSendTime     = 15;	// 服务端接收时间，客户端无需关注
+}
+
+message C2SGroupChatNotice{
+	optional int64 playerId  = 1;	// 玩家ID
+	optional int64 channelId  = 2;	// 频道编码
+	optional string channelCode  = 3;	// 频道编码
+	optional int64 serverMsgId  = 4;	// 服务端消息id
+	optional int64 clientReceiveTime  = 5;	// 客户端接收时间
+}

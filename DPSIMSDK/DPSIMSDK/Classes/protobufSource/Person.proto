@@ -1,7 +1,0 @@
-syntax = "proto3";
-message Person
-{
-    int32 age = 1;
-    string username = 2;
-    string phone = 3;
-}
